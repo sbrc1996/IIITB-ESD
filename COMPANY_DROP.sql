@@ -1,0 +1,70 @@
+/*
+    DROP TABLE SCRIPTS FOR COMPANY DATABASE 
+    CREATED BY:- 
+    NAME :          SUBHAM BASU ROY CHOWDHURY
+    ROLL :          MT2022118
+   
+*/
+
+----------------------------------SELECT DATABASE NAME-----------------------------------
+USE COMPANY;
+
+-- -------------------------------------- DROP ALL THE FOREIGN KEYS----------------------------------------------------
+ALTER TABLE EMPLOYEE
+DROP FOREIGN KEY FK_SUPER_SSN;
+
+ALTER TABLE EMPLOYEE
+DROP FOREIGN KEY FK_DNO;
+
+
+ALTER TABLE DEPARTMENT
+DROP FOREIGN KEY FK_MGR_SSN;
+
+ALTER TABLE DEPT_LOCATIONS
+DROP FOREIGN KEY FK_DNUMBER;
+
+ALTER TABLE PROJECT
+DROP FOREIGN KEY FK_DNUM;
+
+ALTER TABLE WORKS_ON
+DROP FOREIGN KEY FK_PNO;
+
+ALTER TABLE WORKS_ON
+DROP FOREIGN KEY FK_ESSN;
+
+ALTER TABLE `DEPENDENT`
+DROP FOREIGN KEY FK_DPND_ESSN;
+
+-- -------------------------------------- DROP ALL THE PRIMARY KEYS----------------------------------------------------
+ALTER TABLE EMPLOYEE
+DROP PRIMARY KEY;
+
+ALTER TABLE DEPARTMENT
+DROP PRIMARY KEY;
+
+ALTER TABLE DEPT_LOCATIONS
+DROP PRIMARY KEY;
+
+ALTER TABLE WORKS_ON
+DROP PRIMARY KEY;
+
+ALTER TABLE PROJECT
+DROP PRIMARY KEY;
+
+ALTER TABLE `DEPENDENT`
+DROP PRIMARY KEY;
+
+-- -------------------------------------- DROP ALL THE TABLE DATA AND THE STRUCTURES---------------------------------------
+
+DROP TABLE EMPLOYEE;
+DROP TABLE DEPARTMENT;
+DROP TABLE DEPT_LOCATIONS;
+DROP TABLE WORKS_ON;
+DROP TABLE PROJECT;
+DROP TABLE `DEPENDENT`;
+
+-- -------------------------------------- DROP ALL THE DATABASE--------------------------------------
+
+DROP DATABASE COMPANY;
+
+-- ---------------------------------------------------------------------------------------------------------------------------
